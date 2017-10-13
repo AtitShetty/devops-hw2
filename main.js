@@ -45,14 +45,6 @@ function Constraint(properties) {
     this.kind = properties.kind;
 }
 
-function ConstraintProperty(properties) {
-    this.ident = properties.ident;
-    this.name = properties.name
-    this.value = properties.value;
-    this.funcName = properties.funcName;
-    this.kind = properties.kind;
-}
-
 function constraints(filePath) {
     var buf = fs.readFileSync(filePath, "utf8");
     var result = esprima.parse(buf, options);
